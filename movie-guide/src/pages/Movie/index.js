@@ -1,7 +1,7 @@
 function Movie() {
   return(
     <div>
-      Welcome to Single Movie Page
+      <h1>Welcome to Single Movie Page</h1>
     </div>
   );
 }
