@@ -7,6 +7,7 @@ import './home.css';
 
 function Home() {
   const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(()=> {
     async function loadMovies(){
@@ -20,12 +21,20 @@ function Home() {
       // console.log(response.data.results.slice(0, 10))
       //using SLICE because the array returned from the API has a lot of movies. So I want to show only the first 10.
       setMovies(response.data.results.slice(0, 10));      
-
+      setLoading(false);
     }
 
     loadMovies();
 
   }, [])
+
+  if(loading) {
+    return(
+    <div className="loading">
+      <h1>Loading...</h1>
+    </div>
+    )
+  }
 
   return(
     <div className="container">
@@ -34,7 +43,7 @@ function Home() {
           return(
             <article key={movie.id}>
               <strong>{movie.title}</strong>
-              <img src={`http://image.tmdb.org//t/p/original/${movie.poster_path}`} alt={movie.title}/>
+              <img src={`http://image.tmdb.org//t/p/original/${movie.backdrop_path}`} alt={movie.title}/>
               <Link to={`/movie/${movie.id}`}>Info</Link>
             </article>
           )
