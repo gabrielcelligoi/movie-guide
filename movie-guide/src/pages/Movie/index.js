@@ -59,7 +59,14 @@ function Movie() {
       <span>{movie.overview}</span>
       <strong>Vote Average: {movie.vote_average} / 10</strong>
 
-      
+      <div className="area-buttons">
+        <button>Save</button>
+        <button>
+          <a href="#">
+            Trailer
+          </a>
+        </button>
+      </div>
 
     </div>
   );
