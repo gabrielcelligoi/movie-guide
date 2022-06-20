@@ -4,6 +4,8 @@ import Error from "../Error";
 
 import api from "../../services/api";
 
+import './movie.css'
+
 function Movie() {
   const { id } = useParams();
   const [error, setError] = useState(false);
@@ -55,8 +57,9 @@ function Movie() {
       
       <h3>Overview</h3>
       <span>{movie.overview}</span>
-
       <strong>Vote Average: {movie.vote_average} / 10</strong>
+
+      
 
     </div>
   );
