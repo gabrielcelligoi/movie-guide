@@ -40,7 +40,7 @@ function Movie() {
     // take the list on localstorage and saves it on a variable
     const myList = localStorage.getItem("@movieguide");
 
-    // take the myList variable, convert it to a string and saves it to a variable named savedMovies. If the myList variable doesnt exist, it saves an empty array to savedMovies variable
+    // take the myList variable, convert it to an array (JSON.parse because it originaly is a string) and saves it to a variable named savedMovies. If the myList variable doesnt exist, it saves an empty array to savedMovies variable
     let savedMovies = JSON.parse(myList) || [];
 
     // create a variable hasMovie. savedMovies.some will return true if savedMovie.id === movie.id
