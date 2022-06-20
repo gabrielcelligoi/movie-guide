@@ -34,7 +34,7 @@ function Movie() {
       console.log('component desassembled')
     }
 
-  }, []);
+  }, [id]);
 
   if(error) {
     return(
@@ -62,7 +62,7 @@ function Movie() {
       <div className="area-buttons">
         <button>Save</button>
         <button>
-          <a href="#">
+          <a href={`http://youtube.com/results?search_query=${movie.title}`}>
             Trailer
           </a>
         </button>
