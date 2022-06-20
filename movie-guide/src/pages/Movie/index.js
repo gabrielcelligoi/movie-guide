@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Error from "../Error";
+import { toast } from "react-toastify";
 
 import api from "../../services/api";
 
@@ -47,6 +48,7 @@ function Movie() {
     const hasMovie = savedMovies.some((savedMovie) => savedMovie.id === movie.id)
 
     if(hasMovie) {
+      toast.warn("This movie is already on your list.")
       return;
     }
 
