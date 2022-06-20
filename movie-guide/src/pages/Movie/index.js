@@ -62,7 +62,8 @@ function Movie() {
       <div className="area-buttons">
         <button>Save</button>
         <button>
-          <a href={`http://youtube.com/results?search_query=${movie.title}`}>
+          {/* target=_blank for open the link in another tab and rel=external to inform broser engines that this is an external link*/}
+          <a target="_blank" rel="external" href={`http://youtube.com/results?search_query=${movie.title} Trailer`}>
             Trailer
           </a>
         </button>
