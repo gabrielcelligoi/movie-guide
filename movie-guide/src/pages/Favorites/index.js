@@ -24,6 +24,8 @@ function Favorites() {
     <div className='my-movies'>
       <h1>My Movies</h1>
 
+      {movies.length === 0 && <span>You don't have any favorite movie ;(</span>}
+
       <ul>
         {movies.map((movie) => {
           return(
