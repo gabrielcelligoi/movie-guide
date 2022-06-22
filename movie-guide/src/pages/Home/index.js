@@ -41,11 +41,12 @@ function Home() {
       <div className="movies-list">
         {movies.map((movie) => {
           return(
-            <article key={movie.id}>
+            <div key={movie.id}>
+              <Link to={`/movie/${movie.id}`}>
+                <img src={`http://image.tmdb.org//t/p/original/${movie.poster_path}`} alt={movie.title}/>                
+              </Link>
               <strong>{movie.title}</strong>
-              <img src={`http://image.tmdb.org//t/p/original/${movie.backdrop_path}`} alt={movie.title}/>
-              <Link to={`/movie/${movie.id}`}>Info</Link>
-            </article>
+            </div>
           )
         })}
       </div>

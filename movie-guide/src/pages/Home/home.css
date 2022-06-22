@@ -10,7 +10,7 @@
   margin-top: 14px;
 }
 
-.movies-list article {
+.movies-list div {
   width: 100%;
   background-color: #FFF;
   padding: 15px;
@@ -30,11 +30,10 @@
   max-height: 450px;
   object-fit: cover;
   display: block;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-radius: 8px;
 }
 
-.movies-list a {
+/* .movies-list a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,4 +44,4 @@
   color: #FFF;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-}
+} */
