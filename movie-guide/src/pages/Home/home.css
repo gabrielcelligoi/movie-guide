@@ -5,10 +5,23 @@
   grid-auto-flow: column;
   grid-auto-columns: 21%;
 
-  overflow-x: auto;
+  overflow-x: scroll;
   overscroll-behavior-inline: contain;
 }
 
+.movies-list::-webkit-scrollbar {
+  width: 1em;
+  height: 10px;
+}
+
+.movies-list::-webkit-scrollbar-track {
+  box-shadow: insert 0 0 6px rgba(0, 0, 0, 0,3);
+}
+
+.movies-list::-webkit-scrollbar-thumb {
+  background-color: lightgray;
+  border-radius: 10px;
+}
 
 
 .movies-list div {
