@@ -7,6 +7,7 @@ import './home.css';
 
 function Home() {
   const [movies, setMovies] = useState([]);
+  const [page, setPage] = useState(1)
   const [loading, setLoading] = useState(true);
 
   useEffect(()=> {
@@ -14,19 +15,23 @@ function Home() {
       const response = await api.get("movie/popular", {
         params: {
           api_key: "1f6b33fb81a101dccbcc1b538423c585",
-          page: 1,
+          page: page,
         }
       })
       
-      // console.log(response.data.results.slice(0, 10))
-      //using SLICE because the array returned from the API has a lot of movies. So I want to show only the first 10.
-      setMovies(response.data.results);      
+      if (page !== response.data.total_pages && page < 5) {
+        let sumPage = page + 1;
+        setPage(sumPage);
+        
+      }
+      setMovies(prev => [...prev, ...response.data.results]);
+      
       setLoading(false);
     }
 
     loadMovies();
 
-  }, [])
+  }, [page])
 
   if(loading) {
     return(
@@ -46,6 +51,7 @@ function Home() {
                 <img src={`http://image.tmdb.org//t/p/original/${movie.poster_path}`} alt={movie.title}/>                
               </Link>
               <strong>{movie.title}</strong>
+              <strong>{movie.id}</strong>
             </div>
           )
         })}
