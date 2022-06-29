@@ -8,7 +8,6 @@ import './popular.css';
 function Popular() {
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1)
-  const [loading, setLoading] = useState(true);
 
   useEffect(()=> {
     async function loadMovies(){
@@ -26,20 +25,13 @@ function Popular() {
       }
       setMovies(prev => [...prev, ...response.data.results]);
       
-      setLoading(false);
     }
 
     loadMovies();
 
   }, [page])
 
-  if(loading) {
-    return(
-    <div className="loading">
-      <h1>Loading...</h1>
-    </div>
-    )
-  }
+ 
 
   return(
     <div className="container">
