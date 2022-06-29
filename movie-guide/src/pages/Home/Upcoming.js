@@ -18,11 +18,12 @@ function Upcoming() {
         }
       })
       
+      //fetch 5 pages of data
       if (page !== response.data.total_pages && page < 5) {
         let sumPage = page + 1;
-        setPage(sumPage);
-        
+        setPage(sumPage);        
       }
+
       setMovies(prev => [...prev, ...response.data.results]);
       
     }
@@ -35,18 +36,20 @@ function Upcoming() {
 
   return(
     <div className="container">
-      <h2>Most Popular</h2>
+      <h2>Upcoming Movies</h2>
       <div className="movies-list">
         {movies.map((movie) => {
-          return(
-            <div key={movie.id}>
-              <Link to={`/movie/${movie.id}`}>
-                <img src={`http://image.tmdb.org//t/p/original/${movie.poster_path}`} alt={movie.title}/>                
-              </Link>
-              <strong>{movie.title}</strong>
-              <strong>{movie.id}</strong>
-            </div>
-          )
+          if(movie.release_date >= "2022-06-15"){
+            return(
+              <div key={movie.id}>
+                <Link to={`/movie/${movie.id}`}>
+                  <img src={`http://image.tmdb.org//t/p/original/${movie.poster_path}`} alt={movie.title}/>                
+                </Link>
+                <strong>{movie.title}</strong>
+                <strong>{movie.release_date}</strong>
+              </div>
+            )
+          }
         })}
       </div>
     </div>
