@@ -7,7 +7,28 @@ import './popular.css';
 
 function Upcoming() {
   const [movies, setMovies] = useState([]);
-  const [page, setPage] = useState(1)
+  const [page, setPage] = useState(1);
+  const date = new Date();
+  const year = date.getFullYear();
+  let month = date.getMonth()+1;
+  let nextMonth = date.getMonth()+2;
+  let day = date.getDate();
+
+  if(month < 10) {
+    month = `0${month}`;
+  }
+
+  if(nextMonth < 10) {
+    nextMonth = `0${nextMonth}`;
+  }
+
+  if(day < 10) {
+    day = `0${day}`
+  }
+
+  const today = `${year}-${month}-${day}`;
+  const releaseLimit = `${year}-${nextMonth}-${day}`;
+
 
   useEffect(()=> {
     async function loadMovies(){
@@ -29,7 +50,7 @@ function Upcoming() {
     }
 
     loadMovies();
-
+    
   }, [page])
 
  
@@ -39,7 +60,7 @@ function Upcoming() {
       <h2>Upcoming Movies</h2>
       <div className="movies-list">
         {movies.map((movie) => {
-          if(movie.release_date >= "2022-06-15"){
+          if(movie.release_date >= today && movie.release_date <= releaseLimit && movie.original_language === "en"){
             return(
               <div key={movie.id}>
                 <Link to={`/movie/${movie.id}`}>
