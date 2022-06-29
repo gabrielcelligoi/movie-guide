@@ -5,13 +5,13 @@ import './popular.css';
 
 // API URL: movie/now_playing?api_key=1f6b33fb81a101dccbcc1b538423c585
 
-function Popular() {
+function Upcoming() {
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1)
 
   useEffect(()=> {
     async function loadMovies(){
-      const response = await api.get("movie/popular", {
+      const response = await api.get("movie/upcoming", {
         params: {
           api_key: "1f6b33fb81a101dccbcc1b538423c585",
           page: page,
@@ -53,4 +53,4 @@ function Popular() {
   );
 }
 
-export default Popular;
+export default Upcoming;
