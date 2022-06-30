@@ -39,19 +39,24 @@ function Popular() {
           setContent={setContent}
         />
       </div>
-      <div className="movies-list">
-        {movies.map((movie) => {
-          return(
-            <div key={movie.id}>
-              <Link to={`/movie/${movie.id}`}>
-                <img src={`http://image.tmdb.org//t/p/original/${movie.poster_path}`} alt={movie.title}/>                
-              </Link>
-              <h2>{movies.indexOf(movie)+1}</h2>
-              <strong>{movie.title ? movie.title : movie.name}</strong>              
-            </div>
-          )
-        })}
-      </div>
+
+      <div>
+        <div className="fade"></div>
+        <div className="movies-list">        
+          {movies.map((movie) => {
+            return(
+              <div key={movie.id}>
+                <Link to={`/movie/${movie.id}`}>
+                  <img src={`http://image.tmdb.org//t/p/original/${movie.poster_path}`} alt={movie.title}/>                
+                </Link>
+                <h2>{movies.indexOf(movie)+1}</h2>
+                <strong>{movie.title ? movie.title : movie.name}</strong>              
+              </div>
+            )
+          })}
+        </div>
+    </div>
+
     </div>
   );
 }

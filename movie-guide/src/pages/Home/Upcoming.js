@@ -60,20 +60,24 @@ function Upcoming() {
       <div className="header-container">
         <h2>Upcoming Movies</h2>
       </div>
-      <div className="movies-list">
-        {movies.map((movie) => {
-          if(movie.release_date >= today && movie.release_date <= releaseLimit && movie.original_language === "en"){
-            return(
-              <div key={movie.id}>
-                <Link to={`/movie/${movie.id}`}>
-                  <img src={`http://image.tmdb.org//t/p/original/${movie.poster_path}`} alt={movie.title}/>                
-                </Link>
-                <strong>{movie.title}</strong>
-                <strong>{movie.release_date}</strong>
-              </div>
-            )
-          }
-        })}
+
+      <div>
+        <div className="fade"></div>
+        <div className="movies-list">
+          {movies.map((movie) => {
+            if(movie.release_date >= today && movie.release_date <= releaseLimit && movie.original_language === "en"){
+              return(
+                <div key={movie.id}>
+                  <Link to={`/movie/${movie.id}`}>
+                    <img src={`http://image.tmdb.org//t/p/original/${movie.poster_path}`} alt={movie.title}/>                
+                  </Link>
+                  <strong>{movie.title}</strong>
+                  <strong>{movie.release_date}</strong>
+                </div>
+              )
+            }
+          })}
+        </div>
       </div>
     </div>
   );

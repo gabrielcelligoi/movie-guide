@@ -17,10 +17,26 @@
   padding-bottom: 0px;
 }
 
+.fade {
+  content: '';
+  width: 60px;
+  /* height: 100%; */
+  position: absolute;
+  /* top: 0; */
+  right: 0;
+  background-image: linear-gradient(to right, rgba(255,255,255,0) 0%, #fff 100%);
+  will-change: opacity;
+  pointer-events: none;
+  height: 400px;
+}
+
 .movies-list {
   max-width: 1600px;
   margin: 16px 32px;
   margin-top: 0px;
+  /* esse aqui */
+  margin-right: 0px;
+
   display: flex;
   flex-direction: row;
   grid-auto-flow: column;
@@ -28,6 +44,8 @@
 
   overflow-x: scroll;
   overscroll-behavior-inline: contain;
+
+  
 }
 
 .movies-list::-webkit-scrollbar {
