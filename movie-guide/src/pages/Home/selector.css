@@ -1,0 +1,21 @@
+.selectors li {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0px;
+  border: 1px solid darkgrey;
+  border-radius: 1em;
+}
+
+.button {
+  padding: 8px 32px;
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.button--selected {
+  padding: 8px 32px;
+  border-radius: 1em;
+  background-color: black;
+  color: white;
+}

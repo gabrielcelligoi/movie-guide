@@ -2,35 +2,43 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../../services/api";
 import './popular.css';
+import Selector from "./Selector";
 
 // API URL: movie/now_playing?api_key=1f6b33fb81a101dccbcc1b538423c585
 
 function Popular() {
   const [movies, setMovies] = useState([]);
+  const [content, setContent] = useState('movie')
   
 
   useEffect(()=> {
     async function loadMovies(){
-      const response = await api.get("movie/popular", {
+      const response = await api.get(`${content}/popular`, {
         params: {
           api_key: "1f6b33fb81a101dccbcc1b538423c585",
           page: 1,
         }
       })      
       
-      setMovies(prev => [...prev, ...response.data.results]);
+      setMovies(response.data.results);
       
     }
 
     loadMovies();
 
-  }, [])
+  }, [content])
 
  
 
   return(
     <div className="container">
-      <h2>Most Popular</h2>
+      <div className="header-container">
+        <h2>Most Popular</h2>
+        < Selector
+          content={content}
+          setContent={setContent}
+        />
+      </div>
       <div className="movies-list">
         {movies.map((movie) => {
           return(

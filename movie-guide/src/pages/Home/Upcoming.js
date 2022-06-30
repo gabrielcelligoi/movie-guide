@@ -57,7 +57,9 @@ function Upcoming() {
 
   return(
     <div className="container">
-      <h2>Upcoming Movies</h2>
+      <div className="header-container">
+        <h2>Upcoming Movies</h2>
+      </div>
       <div className="movies-list">
         {movies.map((movie) => {
           if(movie.release_date >= today && movie.release_date <= releaseLimit && movie.original_language === "en"){
