@@ -38,8 +38,8 @@ function Popular() {
               <Link to={`/movie/${movie.id}`}>
                 <img src={`http://image.tmdb.org//t/p/original/${movie.poster_path}`} alt={movie.title}/>                
               </Link>
-              <strong>{movie.title}</strong>
-              <strong>{movie.id}</strong>
+              <h2>{movies.indexOf(movie)+1}</h2>
+              <strong>{movie.title}</strong>              
             </div>
           )
         })}
