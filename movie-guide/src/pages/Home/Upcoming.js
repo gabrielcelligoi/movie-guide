@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../../services/api";
-import './popular.css';
+import Slider from "react-slick";
+import { BsChevronRight, BsChevronLeft } from "react-icons/fa"
+
+import './upcoming.css';
 
 // API URL: movie/now_playing?api_key=1f6b33fb81a101dccbcc1b538423c585
 
@@ -29,6 +32,24 @@ function Upcoming() {
   const today = `${year}-${month}-${day}`;
   const releaseLimit = `${year}-${nextMonth}-${day}`;
 
+  const NextArrow = ({onClick}) => {
+    return (
+      <div className="arrow next" onClick={onClick}>
+
+      </div>
+    )
+  }
+
+  const settings = {
+    infinite:true,
+    lazyLoad: true,
+    speed: 300,
+    slidesToShow: 3,
+    centerMode: true,
+    centerPadding: 0,
+    nextArrow: <nextArrow/>,
+    prevArrow: <prevArrow/>,
+  }
 
   useEffect(()=> {
     async function loadMovies(){
@@ -53,34 +74,59 @@ function Upcoming() {
     
   }, [page])
 
- 
+  
 
   return(
-    <div className="container">
-      <div className="header-container">
-        <h2>Upcoming Movies</h2>
-      </div>
-
-      <div>
-        <div className="fade"></div>
-        <div className="movies-list">
-          {movies.map((movie) => {
-            if(movie.release_date >= today && movie.release_date <= releaseLimit && movie.original_language === "en"){
-              return(
-                <div key={movie.id}>
-                  <Link to={`/movie/${movie.id}`}>
-                    <img src={`http://image.tmdb.org//t/p/original/${movie.poster_path}`} alt={movie.title}/>                
-                  </Link>
-                  <strong>{movie.title}</strong>
-                  <strong>{movie.release_date}</strong>
-                </div>
-              )
-            }
-          })}
-        </div>
-      </div>
+    
+    
+    <div className="upcoming-list">
+      <Slider {...settings}>
+      {movies.map((movie) => {
+        if(movie.release_date >= today && movie.release_date <= releaseLimit && movie.original_language === "en"){
+          return(
+            <div key={movie.id}>
+              {/* <Link to={`/movie/${movie.id}`}> */}
+                <img src={`http://image.tmdb.org//t/p/original/${movie.poster_path}`} alt={movie.title}/>                
+              {/* </Link> */}
+              {/* <strong>{movie.title}</strong>
+              <strong>{movie.release_date}</strong> */}
+            </div>
+          )
+        }
+      })}
+      </Slider>
     </div>
+    
+    
   );
 }
 
 export default Upcoming;
+
+
+
+// return(
+//   <div className="container">
+//     <div className="header-container">
+//       <h2>Upcoming Movies</h2>
+//     </div>
+
+//     <div>
+//       <div className="movies-list">
+//         {movies.map((movie) => {
+//           if(movie.release_date >= today && movie.release_date <= releaseLimit && movie.original_language === "en"){
+//             return(
+//               <div key={movie.id}>
+//                 <Link to={`/movie/${movie.id}`}>
+//                   <img src={`http://image.tmdb.org//t/p/original/${movie.poster_path}`} alt={movie.title}/>                
+//                 </Link>
+//                 <strong>{movie.title}</strong>
+//                 <strong>{movie.release_date}</strong>
+//               </div>
+//             )
+//           }
+//         })}
+//       </div>
+//     </div>
+//   </div>
+// );
