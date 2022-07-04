@@ -1,3 +1,8 @@
+.container {
+  max-width: 1600px;
+  position: relative;
+}
+
 .header-container {
   max-width: 1600px;
   margin: 16px 32px;
@@ -103,3 +108,9 @@
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 } */
+
+@media (max-width: 1600px) {
+  .container {
+    position: static;
+  }
+}

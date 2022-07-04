@@ -40,8 +40,9 @@ function Popular() {
         />
       </div>
 
+      <div className="fade"></div>
+      
       <div>
-        <div className="fade"></div>
         <div className="movies-list">        
           {movies.map((movie) => {
             return(
