@@ -50,6 +50,8 @@ function Upcoming() {
     )
   }
   
+  const small = window.matchMedia("(max-width: 600px)");
+  console.log(small)
 
   const settings = {
     infinite:true,
@@ -61,6 +63,10 @@ function Upcoming() {
     nextArrow: <NextArrow/>,
     prevArrow: <PrevArrow/>,
     beforeChange: (current, next) => setImageIndex(next),
+  }
+
+  if (small.matches) {
+    settings.slidesToShow = 1;
   }
 
   useEffect(()=> {

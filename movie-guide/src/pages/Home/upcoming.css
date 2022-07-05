@@ -2,7 +2,7 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .upcoming-list {
-  width: 45%;
+  width: 720px;
   margin: 5rem auto;
   height: 450px;
   display: flex;
