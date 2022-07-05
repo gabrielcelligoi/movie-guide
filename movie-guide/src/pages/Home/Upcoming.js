@@ -51,7 +51,6 @@ function Upcoming() {
   }
   
   const small = window.matchMedia("(max-width: 600px)");
-  console.log(small)
 
   const settings = {
     infinite:true,
@@ -111,9 +110,7 @@ function Upcoming() {
               <Link to={`/movie/${movie.id}`}>
                 <img src={`http://image.tmdb.org//t/p/original/${movie.poster_path}`} alt={movie.title}/>                
               </Link>
-              {/* <strong>{movie.title}</strong>
-              <strong>{movie.release_date}</strong> */}
-              <strong>{idx}</strong>
+              <strong>{movie.release_date}</strong>
             </div>
           )
       })}
