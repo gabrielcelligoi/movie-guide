@@ -97,6 +97,7 @@ function Upcoming() {
     
     
     <div className="upcoming-list">
+      <div><h2>Coming Soon</h2></div>
       <Slider {...settings}>
       {movies.map((movie, idx) => {
           return(
