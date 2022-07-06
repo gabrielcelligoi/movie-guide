@@ -1,3 +1,8 @@
+:root {
+  --primary: hsla(240, 100%, 50%, 0.65);
+  --secondary: hsla(120, 100%, 25%, 0,65);
+}
+
 .banner-container {
   align-self: flex-start;
   top: 60px;
@@ -6,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(./example.jpg);
+  background-image: linear-gradient(to right, rgba(13, 28, 59, 0.7), rgb(66, 74, 184, 0.7)), url(./example.jpg);
   background-size: cover;
   background-position: center;
   z-index: -1;
