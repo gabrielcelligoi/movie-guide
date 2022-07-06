@@ -1,6 +1,8 @@
+import './banner.css'
+
 function Banner() {
   return(
-    <div>
+    <div className='banner-container'>
 
     </div>
   )

@@ -1,0 +1,13 @@
+.banner-container {
+  align-self: flex-start;
+  top: 60px;
+  height: 400px;
+  width: -webkit-fill-available;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./example.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
