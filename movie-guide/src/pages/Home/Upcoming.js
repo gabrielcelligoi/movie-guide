@@ -19,6 +19,7 @@ function Upcoming() {
   let nextMonth = date.getMonth()+2;
   let day = date.getDate();
 
+  //format date
   if(month < 10) {
     month = `0${month}`;
   }
@@ -34,6 +35,7 @@ function Upcoming() {
   const today = `${year}-${month}-${day}`;
   const releaseLimit = `${year}-${nextMonth}-${day}`;
 
+  //set carousel's arrows
   const NextArrow = ({onClick}) => {
     return (
       <div className="arrow next" onClick={onClick}>
@@ -50,6 +52,7 @@ function Upcoming() {
     )
   }
   
+  // set a const to help with the carousel's responsiveness
   const small = window.matchMedia("(max-width: 600px)");
 
   const settings = {
@@ -64,6 +67,7 @@ function Upcoming() {
     beforeChange: (current, next) => setImageIndex(next),
   }
 
+  // if the const small is true, the carousel will show only one slide
   if (small.matches) {
     settings.slidesToShow = 1;
   }
@@ -77,7 +81,7 @@ function Upcoming() {
         }
       })
       .then((response) => {
-        
+        // select only the movies with release date higher than today
         let filteredMovies = response.data.results.filter(movie => 
           movie.release_date >= today && movie.release_date <= releaseLimit && movie.original_language === "en"
         )
@@ -122,31 +126,3 @@ function Upcoming() {
 }
 
 export default Upcoming;
-
-
-
-// return(
-//   <div className="container">
-//     <div className="header-container">
-//       <h2>Upcoming Movies</h2>
-//     </div>
-
-//     <div>
-//       <div className="movies-list">
-//         {movies.map((movie) => {
-//           if(movie.release_date >= today && movie.release_date <= releaseLimit && movie.original_language === "en"){
-//             return(
-//               <div key={movie.id}>
-//                 <Link to={`/movie/${movie.id}`}>
-//                   <img src={`http://image.tmdb.org//t/p/original/${movie.poster_path}`} alt={movie.title}/>                
-//                 </Link>
-//                 <strong>{movie.title}</strong>
-//                 <strong>{movie.release_date}</strong>
-//               </div>
-//             )
-//           }
-//         })}
-//       </div>
-//     </div>
-//   </div>
-// );
