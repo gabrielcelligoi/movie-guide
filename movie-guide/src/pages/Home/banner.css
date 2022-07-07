@@ -13,3 +13,7 @@
   background-position: center;
   z-index: -1;
 }
+
+.banner-container h2 {
+  color: white;
+}

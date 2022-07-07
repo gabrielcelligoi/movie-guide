@@ -16,6 +16,6 @@
 .button--selected {
   padding: 8px 32px;
   border-radius: 1em;
-  background-color: black;
+  background: linear-gradient(to right, rgba(13, 28, 59), rgb(66, 74, 184));
   color: white;
 }

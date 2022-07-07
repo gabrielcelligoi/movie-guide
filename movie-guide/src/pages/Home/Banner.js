@@ -29,7 +29,7 @@ function Banner() {
   })
 
 
-  
+  //randomize the image in banner
   if(images.length !== 0){
     let randomChange = document.getElementById('randomChange')
     const imgCount = images.length;
@@ -43,11 +43,10 @@ function Banner() {
 
     imgDisp()
   }
-  
-  // `http://image.tmdb.org/t/p/original/${images[number]}`
+ 
   return(
     <div className='banner-container'  id='randomChange'>
-
+      <h2>Explore Now</h2>
     </div>
   )
 }
