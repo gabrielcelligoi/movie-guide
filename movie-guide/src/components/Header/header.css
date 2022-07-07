@@ -12,15 +12,18 @@ header {
   text-decoration: none;
   font-size: 30px;
   cursor: pointer;
-  color: #FFF;
+  background: linear-gradient(to right, #c0fecf 0%, #1ed5a9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .favorites {
   text-decoration: none;
   cursor: pointer;
-  background-color: #FFF;
   padding: 5px 14px;
-  color: #000000;
+  color: #1ed5a9;
   border-radius: 5px;
+  font-family: 'Ubuntu', sans-serif;
 }
