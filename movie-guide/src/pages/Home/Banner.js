@@ -39,9 +39,7 @@ function Banner() {
     function imgDisp(num) {
       randomChange.style.backgroundImage = `linear-gradient(to right, rgba(13, 28, 59, 0.7), rgb(66, 74, 184, 0.7)), url(http://image.tmdb.org/t/p/original/${images[number]})`
     }
-    console.log(randomChange)
-    console.log(images[number])
-
+   
     imgDisp()
   }
  

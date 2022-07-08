@@ -2,7 +2,12 @@ import { useState } from 'react';
 import './search.css'
 
 function Search() {
-  const [searchString, setSearchString] = useState()
+  const [searchString, setSearchString] = useState("")
+
+  const handleClick = (e) => {
+    e.preventDefault()
+    console.log(searchString);
+  }
 
   return (
     <div className='search'>
@@ -14,7 +19,7 @@ function Search() {
           value={searchString}
           onChange={(e) => setSearchString(e.target.value)}
         />
-        <button type='submit'>Search</button>
+        <button type='submit' onClick={handleClick}>Search</button>
       </form>
     </div>
   )
