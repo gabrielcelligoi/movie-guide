@@ -1,5 +1,4 @@
 
-
 .banner-container {
   align-self: flex-start;
   top: 60px;
@@ -9,14 +8,15 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  /* background-image: linear-gradient(to right, rgba(13, 28, 59, 0.7), rgb(66, 74, 184, 0.7)), url(./example.jpg); */
   background-size: cover;
   background-position: center;
-  z-index: -1;
+  /* z-index: -1; */
   padding: 48px;
 }
 
 .banner-container h2 {
   color: white;
   font-family: 'Palanquin Dark', sans-serif;
-}
+  }
+
+  /* background-image: linear-gradient(to right, rgba(13, 28, 59, 0.7), rgb(66, 74, 184, 0.7)), url(./example.jpg); */

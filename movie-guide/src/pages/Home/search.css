@@ -12,10 +12,12 @@
   height: 46px;
   line-height: 46px;
   font-size: 1.1em;
-  color: rgba(0,0,0,0.5);
+  font-family: 'Ubuntu', sans-serif;
+  color: rgba(13, 28, 59);
   border: none;
   border-radius: 30px;
   padding: 10px 20px;
+  outline: none;
 }
 
 .search form button {
