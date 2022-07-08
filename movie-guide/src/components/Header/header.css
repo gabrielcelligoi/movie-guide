@@ -27,3 +27,7 @@ header {
   border-radius: 5px;
   font-family: 'Ubuntu', sans-serif;
 }
+
+.favorites:hover {
+  color: #c0fecf;
+}
