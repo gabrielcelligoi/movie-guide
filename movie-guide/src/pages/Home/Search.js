@@ -1,8 +1,11 @@
+import './search.css'
+
 function Search() {
   return (
-    <div>
+    <div className='search'>
       <form>
-        <input type="text"/>
+        <input type="text" placeholder='Search for a movie or TV show'/>
+        <button>Search</button>
       </form>
     </div>
   )

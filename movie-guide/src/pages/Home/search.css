@@ -1,0 +1,34 @@
+.search {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.search form {
+  position: relative;
+}
+
+.search form input {
+  width: 100%;
+  height: 46px;
+  line-height: 46px;
+  font-size: 1.1em;
+  color: rgba(0,0,0,0.5);
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+.search form button {
+  height: 46px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  position: absolute;
+  right: -1px;
+  cursor: pointer;
+  background-color: rgba(13, 28, 59);
+  font-family: 'Ubuntu', sans-serif;
+  color: #1ed5a9;
+  font-weight: bold;
+  font-size: 15px;
+}
