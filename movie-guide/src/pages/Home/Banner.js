@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import api from '../../services/api';
+import Search from './Search';
 import './banner.css'
 
 function Banner() {
