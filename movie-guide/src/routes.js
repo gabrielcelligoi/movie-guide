@@ -7,6 +7,7 @@ import Favorites from "./pages/Favorites"
 import SearchPage from "./pages/SearchPage";
 
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function RoutesApp() {
   return(
@@ -21,6 +22,7 @@ function RoutesApp() {
         {/* Route for path not found. It has to be the last route! */}
         <Route path="*" element={ <Error/> } />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
