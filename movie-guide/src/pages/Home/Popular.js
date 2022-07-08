@@ -20,8 +20,7 @@ function Popular() {
         }
       })      
       
-      setMovies(response.data.results);
-      
+      setMovies(response.data.results);      
     }
 
     loadMovies();

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './search.css'
 
 function Search() {
@@ -19,7 +20,11 @@ function Search() {
           value={searchString}
           onChange={(e) => setSearchString(e.target.value)}
         />
-        <button type='submit' onClick={handleClick}>Search</button>
+        
+          <button type='submit' onClick={handleClick}>
+            <Link to={`/search/${searchString}`}>Search</Link>
+          </button>
+        
       </form>
     </div>
   )

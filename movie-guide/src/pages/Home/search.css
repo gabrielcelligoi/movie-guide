@@ -29,8 +29,13 @@
   right: -1px;
   cursor: pointer;
   background-color: rgba(13, 28, 59);
-  font-family: 'Ubuntu', sans-serif;
+}
+
+.search form button a {
+  text-decoration: none;
   color: #1ed5a9;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   font-size: 15px;
+
 }
