@@ -22,7 +22,7 @@ function Search() {
         />
         
           <button type='submit' onClick={handleClick}>
-            <Link to={`/search/${searchString}`}>Search</Link>
+            <Link to={`/searchpage/${searchString}`}>Search</Link>
           </button>
         
       </form>

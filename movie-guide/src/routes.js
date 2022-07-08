@@ -16,7 +16,7 @@ function RoutesApp() {
         <Route path="/" element={ <Home/> }/>
         <Route path="/movie/:id" element={ <Movie/> }/>
         <Route path="/favorites" element={ <Favorites/> }/>
-        <Route path="/search/:search-string" element={ <SearchPage /> } />
+        <Route path="/searchpage/:searchstring" element={ <SearchPage /> } />
 
         {/* Route for path not found. It has to be the last route! */}
         <Route path="*" element={ <Error/> } />
