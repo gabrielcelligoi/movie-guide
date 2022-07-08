@@ -17,6 +17,7 @@
 .banner-container h2 {
   color: white;
   font-family: 'Palanquin Dark', sans-serif;
-  }
+  font-size: xx-large;  
+}
 
   /* background-image: linear-gradient(to right, rgba(13, 28, 59, 0.7), rgb(66, 74, 184, 0.7)), url(./example.jpg); */

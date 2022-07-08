@@ -11,11 +11,13 @@
   padding: 8px 32px;
   border-radius: 1em;
   cursor: pointer;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .button--selected {
   padding: 8px 32px;
   border-radius: 1em;
-  background: linear-gradient(to right, rgba(13, 28, 59), rgb(66, 74, 184));
-  color: white;
+  background: rgba(13, 28, 59);
+  color: #1ed5a9;
+  font-family: 'Ubuntu', sans-serif;
 }

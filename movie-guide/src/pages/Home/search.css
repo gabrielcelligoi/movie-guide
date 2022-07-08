@@ -37,5 +37,9 @@
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   font-size: 15px;
+}
 
+.header-container h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: rgba(13, 28, 59);
 }

@@ -32,7 +32,7 @@ function Popular() {
   return(
     <div className="container">
       <div className="header-container">
-        <h2>Most Popular</h2>
+        <h2>What's Popular</h2>
         < Selector
           content={content}
           setContent={setContent}
@@ -49,7 +49,7 @@ function Popular() {
                 <Link to={`/movie/${movie.id}`}>
                   <img src={`http://image.tmdb.org//t/p/original/${movie.poster_path}`} alt={movie.title}/>                
                 </Link>
-                <h2>{movies.indexOf(movie)+1}</h2>
+                <h3>{movies.indexOf(movie)+1}</h3>
                 <strong>{movie.title ? movie.title : movie.name}</strong>              
               </div>
             )
