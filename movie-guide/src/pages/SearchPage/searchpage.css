@@ -1,0 +1,48 @@
+.movie-list {
+  max-width: 1600px;
+  margin: 16px 32px;
+  margin-top: 0px; 
+  margin-right: 0px;
+
+  display: flex;
+  flex-direction: column;  
+}
+
+.movie-list div {
+  background-color: rgb(255, 255, 255);
+  margin: 16px;
+  border-radius: 4px;
+  display: flex;
+}
+
+.movie-list strong {
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Palanquin Dark', sans-serif;
+  margin-top: -10px;
+}
+
+.movie-list img {
+  width: 100px;
+  max-height: 450px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.movie-list div .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0px 16px;
+}
+
+.description h4{
+  color:darkgray;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  margin-bottom: 15px;
+}

@@ -45,9 +45,7 @@
   grid-auto-columns: 21%;
 
   overflow-x: auto;
-  overscroll-behavior-inline: contain;
-
-  
+  overscroll-behavior-inline: contain;  
 }
 
 .movies-list::-webkit-scrollbar {
