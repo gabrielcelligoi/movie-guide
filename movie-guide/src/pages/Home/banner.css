@@ -6,12 +6,14 @@
   height: 400px;
   width: -webkit-fill-available;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
   /* background-image: linear-gradient(to right, rgba(13, 28, 59, 0.7), rgb(66, 74, 184, 0.7)), url(./example.jpg); */
   background-size: cover;
   background-position: center;
   z-index: -1;
+  padding: 48px;
 }
 
 .banner-container h2 {

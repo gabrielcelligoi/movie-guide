@@ -47,7 +47,8 @@ function Banner() {
  
   return(
     <div className='banner-container'  id='randomChange'>
-      <h2>Explore Now</h2>
+      <h2>Explore Now</h2>      
+      <Search />
     </div>
   )
 }
