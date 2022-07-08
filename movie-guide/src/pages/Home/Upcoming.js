@@ -106,15 +106,16 @@ function Upcoming() {
     
     
     <div className="upcoming-list">
-      <div><h2>Coming Soon</h2></div>
+      <div className="upcoming-title"><h2>Coming Soon</h2></div>
       <Slider {...settings}>
       {movies.map((movie, idx) => {
           return(
-            <div key={movie.id} className={idx === imageIndex ? "slide activeSlide" : "slide"}>
+            <div key={movie.id} className={idx === imageIndex ? "slide activeSlide" : "slide nonactive"}>
               <Link to={`/movie/${movie.id}`}>
                 <img src={`http://image.tmdb.org//t/p/original/${movie.poster_path}`} alt={movie.title}/>                
               </Link>
               <strong>{movie.release_date}</strong>
+              <div className="description">{movie.overview}</div>
             </div>
           )
       })}
