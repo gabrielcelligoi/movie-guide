@@ -5,8 +5,8 @@ function Footer() {
   return(
     <footer>
       <p>Created by Gabriel Celligoi</p>
-      <a href='https://github.com/gabrielcelligoi'><AiFillGithub /></a>
-      <a href='https://www.linkedin.com/in/gabrielcelligoi/'><AiFillLinkedin /></a>
+      <a href='https://github.com/gabrielcelligoi' target="_blank"><AiFillGithub /></a>
+      <a href='https://www.linkedin.com/in/gabrielcelligoi/' target="_blank"><AiFillLinkedin /></a>
     </footer>
   )
 }
