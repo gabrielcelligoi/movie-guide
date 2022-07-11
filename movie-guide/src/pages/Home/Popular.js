@@ -49,7 +49,14 @@ function Popular() {
                 <Link to={`/movie/${movie.id}`}>
                   <img src={`http://image.tmdb.org//t/p/original/${movie.poster_path}`} alt={movie.title}/>                
                 </Link>
-                <h3>{movies.indexOf(movie)+1}</h3>
+
+                <div className="ranking-container">
+                  <div className="ranking-container-relative">
+                    <div className="circle"></div>
+                    <h3>{movies.indexOf(movie)+1}</h3>
+                  </div>
+                </div>
+
                 <strong>{movie.title ? movie.title : movie.name}</strong>              
               </div>
             )
