@@ -135,5 +135,6 @@
 @media (max-width: 1200px) {
   .container {
     position: static;
+    width: 800px;
   }
 }
