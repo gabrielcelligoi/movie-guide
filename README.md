@@ -11,6 +11,8 @@ A guide to movies and TV shows. This application was built using React, Axios an
 - Users can save movies to check out later.
 - Users can find a link to watch the movie's trailer on YouTube.
 
+## Screenshot
+![Banner](./screenshots/movieguide-homepage.png)
 
 ## GIF
 ![Homepage](./screenshots/movieguide-homepage.gif)
