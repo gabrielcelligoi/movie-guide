@@ -5,9 +5,9 @@
   flex-wrap: wrap;
 
   /* hide the content overflowing horizontaly */
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 
   position: relative;
-    min-height: 150vh;
+    min-height: 175vh;
     height: 100%;
 }
