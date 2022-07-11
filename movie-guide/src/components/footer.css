@@ -1,11 +1,21 @@
 footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   height: 60px;
   background-color: rgba(13, 28, 59);
+  color: #1ed5a9;
   padding: 0 48px;
-  /* position: absolute; */
   bottom: 0;
+}
+
+footer p {
+  margin: 0px 5px;
+}
+
+footer svg {
+  text-decoration: none;
+  color: #1ed5a9;
+  margin: 0px 5px;
 }
