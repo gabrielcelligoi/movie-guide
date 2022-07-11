@@ -1,9 +1,9 @@
 
 .banner-container {
-  align-self: flex-start;
+  align-self: center;
   top: 60px;
-  height: 400px;
-  width: -webkit-fill-available;
+  height: 400px;  
+  width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -20,4 +20,11 @@
   font-size: xx-large;  
 }
 
+@media (max-width: 1200px) {
+  .banner-container {
+    align-self: flex-start;
+    width: -webkit-fill-available;
+  }
+}
   /* background-image: linear-gradient(to right, rgba(13, 28, 59, 0.7), rgb(66, 74, 184, 0.7)), url(./example.jpg); */
+  /*  */
