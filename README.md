@@ -10,3 +10,7 @@ A guide to movies and TV shows. This application was built using React, Axios an
 - A carousel shows the upcoming movies.
 - Users can save movies to check out later.
 - Users can find a link to watch the movie's trailer on YouTube.
+
+
+## GIF
+![Homepage](./screenshots/movieguide-homepage.gif)
